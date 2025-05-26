@@ -13,7 +13,7 @@ local config = wezterm.config_builder()
 -- or, changing the font size and color scheme.
 config.font_size = 10
 config.color_scheme = "Tokyo Night"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 
 config.leader = { key = "p", mods = "CTRL" }
 config.keys = {
