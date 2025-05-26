@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 set EDITOR nvim
+set -x ELECTRON_OZONE_PLATFORM_HINT auto
 fish_add_path "$HOME/.local/bin"
 source "$HOME/.cargo/env.fish"
 alias lg="lazygit"
