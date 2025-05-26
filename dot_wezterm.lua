@@ -11,10 +11,9 @@ local config = wezterm.config_builder()
 -- config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 10
-config.color_scheme = "catppuccin-mocha"
+config.font_size = 12
+config.color_scheme = "Tokyo Night"
 config.window_background_opacity = 0.8
-config.adjust_window_size_when_changing_font_size = false
 
 config.leader = { key = "p", mods = "CTRL" }
 config.keys = {
