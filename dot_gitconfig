@@ -1,3 +1,5 @@
 [user]
 	name = ginloy
 	email = liyongleow@gmail.com
+[pull]
+	rebase = true
