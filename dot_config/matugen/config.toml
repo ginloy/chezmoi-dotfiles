@@ -43,4 +43,8 @@ output_path = '~/.config/starship.toml'
 [templates.kitty]
 input_path = './templates/kitty-colors.conf'
 output_path = '~/.config/kitty/themes/matugen.conf'
-post_hook = "kitty kitten themes --reload-in=all matugen"
+
+[templates.terminals]
+input_path = './templates/tty-colors.txt'
+output_path = '~/.cache/matugen/sequences'
+post_hook = "bash -c 'for pty in /dev/pts/[0-9]*; do cat ~/.cache/matugen/sequences | tr -d \"[:space:]\" > $pty; done'"
