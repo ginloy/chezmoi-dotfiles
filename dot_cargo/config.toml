@@ -1,3 +1,2 @@
 [build]
-rustc-wrapper = "/usr/bin/sccache"
 target-dir = "cargo-target"
