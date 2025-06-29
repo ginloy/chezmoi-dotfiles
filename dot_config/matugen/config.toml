@@ -10,7 +10,7 @@ output_path = "~/.config/waybar/colors.css"
 
 [templates.hyprland]
 input_path = "./templates/hyprland-colors.conf"
-output_path = "~/.config/hypr/conf/colors.conf"
+output_path = "~/.config/hypr/config/colors.conf"
 
 [templates.hyprpaper]
 input_path = "./templates/hyprpaper.conf"
