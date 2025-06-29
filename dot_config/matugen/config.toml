@@ -6,7 +6,7 @@ set = true
 [templates.waybar]
 input_path = "./templates/colors.css"
 output_path = "~/.config/waybar/colors.css"
-post_hook = "bash -c 'killall waybar; hyprctl dispatch exec waybar'"
+# post_hook = "bash -c 'killall waybar; hyprctl dispatch exec waybar'"
 
 [templates.hyprland]
 input_path = "./templates/hyprland-colors.conf"
@@ -48,3 +48,11 @@ output_path = '~/.config/kitty/themes/matugen.conf'
 input_path = './templates/tty-colors.txt'
 output_path = '~/.cache/matugen/sequences'
 post_hook = "bash -c 'for pty in /dev/pts/[0-9]*; do cat ~/.cache/matugen/sequences | tr -d \"[:space:]\" > $pty; done'"
+
+[templates.ags]
+input_path = "./templates/ags-colors.scss"
+output_path = "~/.config/ags/sass/colors.scss"
+
+[templates.quickshell]
+input_path = "./templates/quickshell-colors.qml"
+output_path = "~/.config/quickshell/Colors.qml"
