@@ -18,13 +18,14 @@ Rectangle {
     // default property list<QtObject> data
     property alias child: loader.sourceComponent
 
-    implicitHeight: loader.implicitHeight + topPadding + bottomPadding
-    implicitWidth: loader.implicitWidth + leftPadding + rightPadding
+    implicitHeight: loader.height + topPadding + bottomPadding
+    implicitWidth: loader.width + leftPadding + rightPadding
 
     Loader {
         id: loader
-        x: leftPadding
-        y: topPadding
+        // x: leftPadding
+        // y: topPadding
+        anchors.centerIn: parent
     }
     // onChildrenChanged: {
     //     children[0].x = leftPadding
