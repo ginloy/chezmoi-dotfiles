@@ -1,3 +1,12 @@
+{{ if eq .chezmoi.hostname "cachyos-pc" }}
+listener {
+    timeout = 300                                 # 5min
+    on-timeout = hyprctl dispatch dpms off  
+    on-resume = hyprctl dispatch dpms on
+}
+{{ else }}
+
+
 general {
     lock_cmd = pidof hyprlock || uwsm app -- hyprlock -q --no-fade-in       # avoid starting multiple hyprlock instances.
     before_sleep_cmd = loginctl lock-session    # lock before suspend.
@@ -32,3 +41,4 @@ listener {
     timeout = 360                                # 6min
     on-timeout = systemctl suspend                # suspend pc
 }
+{{ end }}
