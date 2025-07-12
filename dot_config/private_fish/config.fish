@@ -9,7 +9,7 @@ end
 
 set EDITOR nvim
 set -x BROWSER firefox
-if nvidia-smi >/dev/null
+if type -q nvidia-smi && nvidia-smi >/dev/null
     set -x LIBVA_DRIVER_NAME nvidia
     set -x __GLX_VENDOR_LIBRARY_NAME nvidia
 end
