@@ -1,12 +1,3 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    starship init fish | source
-end
-
-if test -f ~/.cache/matugen/sequences
-    cat ~/.cache/matugen/sequences | tr -d '[:space:]' | cat
-end
-
 set EDITOR nvim
 set -x BROWSER firefox
 if type -q nvidia-smi && nvidia-smi >/dev/null
@@ -17,5 +8,14 @@ set -x ELECTRON_OZONE_PLATFORM_HINT auto
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 alias lg="lazygit"
-zoxide init fish | source
-fastfetch
+
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    starship init fish | source
+
+    if test -f ~/.cache/matugen/sequences
+        cat ~/.cache/matugen/sequences | tr -d '[:space:]' | cat
+    end
+    zoxide init fish | source
+    fastfetch
+end
