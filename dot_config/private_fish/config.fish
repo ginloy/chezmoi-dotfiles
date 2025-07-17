@@ -1,8 +1,9 @@
 set EDITOR nvim
 set -x BROWSER firefox
-if type -q nvidia-smi && nvidia-smi >/dev/null
+if type -q nvidia-smi
     set -x LIBVA_DRIVER_NAME nvidia
     set -x __GLX_VENDOR_LIBRARY_NAME nvidia
+    set -x MOZ_DISABLE_RDD_SANDBOX 1
 end
 set -x ELECTRON_OZONE_PLATFORM_HINT auto
 fish_add_path "$HOME/.local/bin"
