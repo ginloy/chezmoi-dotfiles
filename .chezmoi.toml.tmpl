@@ -4,3 +4,12 @@ autoPush = true
 
 [edit]
 command = "nvim"
+
+{{- $nvidia := promptBoolOnce . "nvidia" "Does this machine use nvidia GPU" false }}
+
+[data]
+{{ if $nvidia -}}
+nvidia = true
+{{- else -}}
+nvidia = false
+{{- end }}
