@@ -13,3 +13,4 @@ nvidia = true
 {{- else -}}
 nvidia = false
 {{- end }}
+uuid = {{ output "uuidgen" | trim | quote }}

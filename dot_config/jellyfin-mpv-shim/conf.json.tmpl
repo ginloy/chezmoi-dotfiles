@@ -4,7 +4,7 @@
     "audio_output": "hdmi",
     "auto_play": true,
     "check_updates": true,
-    "client_uuid": "{{ output "cat" "/etc/machine-id" | trim }}",
+    "client_uuid": "{{ .uuid }}",
     "connect_retry_mins": 0,
     "direct_paths": false,
     "discord_presence": false,
