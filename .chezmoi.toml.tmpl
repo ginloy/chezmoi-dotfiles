@@ -13,4 +13,8 @@ nvidia = true
 {{- else -}}
 nvidia = false
 {{- end }}
+{{ if eq .chezmoi.os "windows" -}}
+uuid = {{ output "powershell" "-command" "[guid]::NewGuid().ToString()" | trim | quote }}
+{{- else -}}
 uuid = {{ output "uuidgen" | trim | quote }}
+{{- end }}
