@@ -5,6 +5,7 @@ Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
 }
 
+#Enter::RunWait("windowsterminal.exe")
 #q::Komorebic("close")
 #m::Komorebic("minimize")
 
