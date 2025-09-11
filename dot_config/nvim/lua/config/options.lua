@@ -5,3 +5,11 @@
 if vim.fn.has("win32") then
   LazyVim.terminal.setup("pwsh")
 end
+
+local uv = vim.loop
+if uv.os_uname().sysname == "Windows_NT" then
+  local home = uv.os_getenv("USERPROFILE") or uv.os_getenv("HOMEPATH")
+  if home then
+    uv.os_setenv("HOME", home)
+  end
+end
