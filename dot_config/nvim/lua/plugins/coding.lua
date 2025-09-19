@@ -24,16 +24,16 @@ return {
         qmlls = {
           cmd = { "qmlls", "-E" },
         },
-        clangd = {
-          autostart = false,
-        },
-        ccls = {
-          init_options = {
-            diagnostics = {
-              onChange = 100,
-            },
-          },
-        },
+        -- clangd = {
+        --   autostart = false,
+        -- },
+        -- ccls = {
+        --   init_options = {
+        --     diagnostics = {
+        --       onChange = 100,
+        --     },
+        --   },
+        -- },
       },
     },
   },
