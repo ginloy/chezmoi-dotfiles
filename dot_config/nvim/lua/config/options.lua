@@ -11,3 +11,5 @@ if uv.os_uname().sysname == "Windows_NT" then
     uv.os_setenv("HOME", home)
   end
 end
+
+vim.opt.exrc = true
