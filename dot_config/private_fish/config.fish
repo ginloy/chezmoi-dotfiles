@@ -10,6 +10,10 @@ fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 alias lg="lazygit"
 
+if test -f "/home/linuxbrew/.linuxbrew/bin/brew"
+    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+end
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
