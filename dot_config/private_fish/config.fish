@@ -10,7 +10,9 @@ fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/go/bin"
 alias lg="lazygit"
-bass source "$HOME/export-esp.sh"
+if test -f "$HOME/export-esp.sh"
+    bass source "$HOME/export-esp.sh"
+end
 if test -f "/home/linuxbrew/.linuxbrew/bin/brew"
     eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
