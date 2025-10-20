@@ -24,6 +24,7 @@ return {
         qmlls = {
           cmd = { "qmlls", "-E" },
         },
+        metals = {},
         -- clangd = {
         --   autostart = false,
         -- },
