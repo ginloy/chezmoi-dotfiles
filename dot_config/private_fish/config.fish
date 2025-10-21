@@ -1,4 +1,4 @@
-set EDITOR nvim
+set -x EDITOR nvim
 set -x BROWSER firefox
 if type -q nvidia-smi
     set -x LIBVA_DRIVER_NAME nvidia
