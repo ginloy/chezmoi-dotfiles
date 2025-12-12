@@ -25,6 +25,17 @@ return {
           cmd = { "qmlls", "-E" },
         },
         metals = {},
+        -- vtsls = {
+        --   root_dir = function()
+        --     return not vim.fs.root(0, { "deno.json", "deno.jsonc" })
+        --       and vim.fs.root(0, {
+        --         "tsconfig.json",
+        --         "jsconfig.json",
+        --         "package.json",
+        --         ".git",
+        --       })
+        --   end,
+        -- },
         -- clangd = {
         --   autostart = false,
         -- },
